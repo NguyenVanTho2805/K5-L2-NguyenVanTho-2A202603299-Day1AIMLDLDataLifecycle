@@ -69,7 +69,7 @@ Số lượng prediction theo ngưỡng: xem output ô so sánh `0.20` / `0.35` 
 
 1. Chép một record: `class_name`=… ; `score`=… ; `bbox_xyxy`=[…, …, …, …] ; `bbox_width`=… ; `bbox_height`=…
 
-   **Trả lời:** `class_name`=bowl ; `score`=0.701282 ; `bbox_xyxy`=[155.02, 168.67, 182.38, 184.18] ; `bbox_width`=27.36 ; `bbox_height`=15.51
+   **Trả lời:** `class_name`=bowl ; `score`=0.701283 ; `bbox_xyxy`=[155.02, 168.67, 182.38, 184.18] ; `bbox_width`=27.36 ; `bbox_height`=15.51
 
 2. Giải thích box bằng lời thường: góc trên-trái ở đâu, góc dưới-phải ở đâu, rộng/cao bao nhiêu pixel?
 
@@ -77,7 +77,7 @@ Số lượng prediction theo ngưỡng: xem output ô so sánh `0.20` / `0.35` 
 
 3. Chọn hai ngưỡng (vd. 0.20 và 0.60). Mỗi ngưỡng có bao nhiêu prediction?
 
-   **Trả lời:** Chọn hai ngưỡng 0.35 và 0.60. Ngưỡng 0.35 có 10 prediction (đọc từ ảnh: person 0.91, bowl 0.72, bowl 0.70, oven 0.69, oven 0.63, person 0.61, bowl 0.50, bowl 0.46, cup 0.45, bowl 0.38). Ngưỡng 0.60 chỉ còn 6 prediction (person 0.91, bowl 0.72, bowl 0.70, oven 0.69, oven 0.63, person 0.61), mất 4 hộp score thấp. Hộp `bowl` (score 0.701282) còn ở cả hai ngưỡng.
+   **Trả lời:** Chọn hai ngưỡng 0.35 và 0.60. Ngưỡng 0.35 (ngưỡng tạo JSON) có 11 prediction; ngưỡng 0.60 chỉ còn 6 prediction (person 0.91, bowl 0.72, bowl 0.70, oven 0.69, oven 0.63, person 0.61), mất 5 hộp score thấp (bowl 0.50, bowl 0.46, cup 0.45, cup 0.38, bowl 0.38). Hộp `bowl` (score 0.701283) còn ở cả hai ngưỡng.
 
 4. Khi hạ ngưỡng (giữ nhiều hộp hơn), người **reviewer** phải làm thêm việc gì?
 
@@ -98,7 +98,7 @@ Chỉ dùng ảnh `sample_id = kitchen`. Chọn **một** record.
 
 1. Chép một record: `instance_id`=… ; `class_name`=… ; `score`=… ; số điểm polygon=`polygon_point_count`=… ; 3–5 điểm đầu của `polygon_xy`=…
 
-   **Trả lời:** `instance_id`=kitchen-002 ; `class_name`=bowl ; `score`=0.735744 ; `polygon_point_count`=67 ; 5 điểm đầu của `polygon_xy`=[[53.0, 344.0], [52.0, 345.0], [50.0, 345.0], [49.0, 346.0], [48.0, 346.0]]
+   **Trả lời:** `instance_id`=kitchen-002 ; `class_name`=bowl ; `score`=0.735743 ; `polygon_point_count`=67 ; 5 điểm đầu của `polygon_xy`=[[53.0, 344.0], [52.0, 345.0], [50.0, 345.0], [49.0, 346.0], [48.0, 346.0]]
 
 2. So với box, polygon cho thêm thông tin gì về hình dạng vật thể?
 
@@ -144,14 +144,14 @@ Lab hôm nay chỉ **xem prediction**. Chuỗi dưới đây là vòng đời pr
 
 Kiểm tra trên GitHub trong thư mục `report/`:
 
-- [ ] `REPORT.md` (file này đã điền)
-- [ ] `day1_lab_outputs/classification_predictions.json`
-- [ ] `day1_lab_outputs/detection_predictions.json`
-- [ ] `day1_lab_outputs/segmentation_predictions.json`
-- [ ] `day1_lab_outputs/IMAGE_ATTRIBUTION.md`
-- [ ] `day1_lab_outputs/visuals/classification_top5.png`
-- [ ] `day1_lab_outputs/visuals/detection_predictions.png`
-- [ ] `day1_lab_outputs/visuals/segmentation_prediction.png`
-- [ ] Ô validation cuối notebook báo `PASS`
-- [ ] Không có họ tên, MSSV hoặc dữ liệu nhạy cảm trong báo cáo/output
+- [x] `REPORT.md` (file này đã điền)
+- [x] `day1_lab_outputs/classification_predictions.json`
+- [x] `day1_lab_outputs/detection_predictions.json`
+- [x] `day1_lab_outputs/segmentation_predictions.json`
+- [x] `day1_lab_outputs/IMAGE_ATTRIBUTION.md`
+- [x] `day1_lab_outputs/visuals/classification_top5.png`
+- [x] `day1_lab_outputs/visuals/detection_predictions.png`
+- [x] `day1_lab_outputs/visuals/segmentation_prediction.png`
+- [x] Ô validation cuối notebook báo `PASS`
+- [x] Không có họ tên, MSSV hoặc dữ liệu nhạy cảm trong báo cáo/output
 - [ ] Đã nộp **link repository** trên LMS
